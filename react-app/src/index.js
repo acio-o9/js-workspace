@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 class Welcome extends React.Component {
@@ -10,10 +10,20 @@ class Welcome extends React.Component {
     }
 }
 
-function tick() {
-    const element = <Welcome name="Sara" />;
+function App() {
+    return (
+        <div>
+            <Welcome name="Sara" />
+            <Welcome name="Cahal" />
+            <Welcome name="Edite" />
+        </div>
+    );
+}
 
-    ReactDOM.render(element, document.getElementById('root'));
+function tick() {
+    ReactDOM.render(
+        <App />,
+        document.getElementById('root'));
 }
 
 setInterval(tick, 1000);
