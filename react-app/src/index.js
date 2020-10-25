@@ -4,28 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-function formatName(user) {
-    return user.firstName + ' ' + user.lastName;
+function tick() {
+    const element = (
+        <div>
+            <h1>Hello, world!</h1>
+            <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        </div>
+    );
+
+    ReactDOM.render(element, document.getElementById('root'));
 }
 
-function getGreeting(user) {
-    if (user) {
-        return <h1>Hello, {formatName(user)}!</h1>;
-    }
-    return <h1>Hello, Stranger.</h1>;
-}
+setInterval(tick, 1000);
 
-const user = {
-    firstName: 'Harper',
-    lastName: 'Perez'
-};
 
-const element = getGreeting(user);
-
-ReactDOM.render(
-    element,
-    document.getElementById('root')
-);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
