@@ -4,24 +4,21 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+class Welcome extends React.Component {
+    render() {
+        return <h1>Hello, {this.props.name}</h1>;
+    }
+}
+
 function tick() {
-    const element = (
-        <div>
-            <h1>Hello, world!</h1>
-            <h2>It is {new Date().toLocaleTimeString()}.</h2>
-        </div>
-    );
+    const element = <Welcome name="Sara" />;
 
     ReactDOM.render(element, document.getElementById('root'));
 }
 
 setInterval(tick, 1000);
 
-class Welcome extends React.Component {
-    render() {
-        return <h1>Hello, {this.props.name}</h1>;
-    }
-}
+
 
 
 // If you want your app to work offline and load faster, you can change
