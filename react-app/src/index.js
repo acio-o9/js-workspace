@@ -17,6 +17,9 @@ function tick() {
 
 setInterval(tick, 1000);
 
+function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+}
 
 
 // If you want your app to work offline and load faster, you can change
